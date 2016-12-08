@@ -1,0 +1,32 @@
+Source: lzfse
+Priority: optional
+Maintainer: Jay R. Wren <jrwren@xmtp.net>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://github.com/lzfse/lzfse
+#Vcs-Git: git://anonscm.debian.org/collab-maint/lzfse.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/lzfse.git
+
+Package: lzfse-dev
+Section: libdevel
+Architecture: any
+Depends: lzfseBROKEN (= ${binary:Version}), ${misc:Depends}
+Description: LZFSE compression library
+ This is a reference C implementation of the LZFSE compressor introduced in the
+ Compression library with OS X 10.11 and iOS 9.
+ .
+ LZFSE is a Lempel-Ziv style data compression algorithm using Finite State
+ Entropy coding. It targets similar compression rates at higher compression and
+ decompression speed compared to deflate using zlib.
+
+Package: lzfse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: LZFSE compression command line tool
+ This is a reference C implementation of the LZFSE compressor introduced in the
+ Compression library with OS X 10.11 and iOS 9.
+ .
+ LZFSE is a Lempel-Ziv style data compression algorithm using Finite State
+ Entropy coding. It targets similar compression rates at higher compression and
+ decompression speed compared to deflate using zlib.
